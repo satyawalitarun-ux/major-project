@@ -1,0 +1,102 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="container">
+  <div class="new-listing-container">
+
+```
+<h3 class="new-listing-title text-center">
+  Create a New Listing
+</h3>
+
+<div class="listing-form-card">
+
+  <form method="POST" action="/listings" novalidate class="needs-validation">
+
+    <!-- Title -->
+    <div class="form-group">
+      <label for="title" class="form-label">Title</label>
+      <input
+        id="title"
+        name="listing[title]"
+        placeholder="Enter listing title"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        id="description"
+        name="listing[description]"
+        placeholder="Tell us about your listing..."
+        class="form-control"
+        required
+      ></textarea>
+    </div>
+
+    <!-- Image -->
+    <div class="form-group">
+      <label for="image" class="form-label">Image URL</label>
+      <input
+        id="image"
+        name="listing[image]"
+        placeholder="Paste image URL"
+        type="text"
+        class="form-control"
+      />
+    </div>
+
+    <!-- Price -->
+    <div class="form-group">
+      <label for="price" class="form-label">Price</label>
+      <input
+        id="price"
+        name="listing[price]"
+        placeholder="Enter price"
+        type="number"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Country -->
+    <div class="form-group">
+      <label for="country" class="form-label">Country</label>
+      <input
+        id="country"
+        name="listing[country]"
+        placeholder="Enter country"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Location -->
+    <div class="form-group">
+      <label for="location" class="form-label">Location</label>
+      <input
+        id="location"
+        name="listing[location]"
+        placeholder="Enter location"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Button -->
+    <button type="submit" class="add-listing-btn">
+      ✨ Add Listing
+    </button>
+
+  </form>
+
+</div>
+```
+
+  </div>
+</div>
