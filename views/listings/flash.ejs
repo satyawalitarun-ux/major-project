@@ -1,0 +1,16 @@
+<% if (success && success.length > 0) { %>
+<div class="magic-alert magic-alert-success alert-dismissible" role="alert">
+  <i class="fa-solid fa-circle-check"></i>
+  <span><%= success %></span>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+
+
+<% if (error && error.length > 0) { %>
+<div class="magic-alert magic-alert-danger alert-dismissible" role="alert">
+  <i class="fa-solid fa-circle-exclamation"></i>
+  <span><%= error %></span>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>

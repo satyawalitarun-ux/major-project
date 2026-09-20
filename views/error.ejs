@@ -1,6 +1,10 @@
 <% layout('layouts/boilerplate') %>
 
-<div class="row mt-5">
-  <h1 class="text-danger">Error <%= err.statusCode %></h1>
-  <p class="lead"><%= err.message %></p>
+<div class="magic-error-wrap">
+  <p class="magic-error-code magic-gradient-text"><%= err.statusCode %></p>
+  <h1 style="font-weight: 800; font-size: 1.8rem;">Oops! Something went wrong</h1>
+  <p class="lead text-muted mt-2"><%= err.message %></p>
+  <a href="/listings" class="magic-shimmer-btn mt-3">
+    <i class="fa-solid fa-compass"></i> Back to Listings
+  </a>
 </div>

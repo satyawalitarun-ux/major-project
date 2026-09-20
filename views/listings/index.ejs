@@ -1,17 +1,89 @@
 <% layout("layouts/boilerplate") %>
-    <h3>All Listings</h3>  
- <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1"> 
-     <% for(let listing of Listings) { %>
-        <a href="/listings/<%=listing._id%>" class="list-link">
-        <div class="card col" style="width: 20rem;">
-  <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image url" style="height: 20rem"/> 
-  <div class="card-body">
-    <p class="card-text">
-        <b>  <%=listing.title %> </b>
-    </br>
-        &#8377; <%= listing.price.toLocaleString("en-in") %>/night
+
+<!-- ============ MAGIC UI HERO ============ -->
+<section class="magic-hero magic-blur-fade">
+    <div class="magic-dots"></div>
+    <div class="magic-meteors">
+        <span class="magic-meteor" style="left: 12%; animation-delay: 0s;"></span>
+        <span class="magic-meteor" style="left: 34%; animation-delay: 2.4s;"></span>
+        <span class="magic-meteor" style="left: 58%; animation-delay: 4.2s;"></span>
+        <span class="magic-meteor" style="left: 82%; animation-delay: 1.3s;"></span>
+    </div>
+
+    <span class="magic-badge"><span class="dot"></span> Explore the world</span>
+
+    <h1>Find your next <span class="magic-gradient-text">adventure</span></h1>
+
+    <p class="lead">
+        Hand-picked stays, hidden gems and unforgettable places —
+        all in one magical place.
     </p>
-  </div>
+
+    <a href="/listings/new" class="magic-shimmer-btn">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Add Your Listing
+    </a>
+</section>
+
+<!-- ============ MARQUEE — destinations ============ -->
+<div class="magic-marquee magic-blur-fade mt-4">
+    <div class="magic-marquee-track">
+        <span class="magic-chip"><i class="fa-solid fa-location-dot"></i> Goa</span>
+        <span class="magic-chip"><i class="fa-solid fa-mountain-sun"></i> Manali</span>
+        <span class="magic-chip"><i class="fa-solid fa-umbrella-beach"></i> Bali</span>
+        <span class="magic-chip"><i class="fa-solid fa-city"></i> Dubai</span>
+        <span class="magic-chip"><i class="fa-solid fa-tree"></i> Coorg</span>
+        <span class="magic-chip"><i class="fa-solid fa-sailboat"></i> Andaman</span>
+        <span class="magic-chip"><i class="fa-solid fa-igloo"></i> Ladakh</span>
+        <span class="magic-chip"><i class="fa-solid fa-hippo"></i> Kenya</span>
+        <span class="magic-chip"><i class="fa-solid fa-location-dot"></i> Goa</span>
+        <span class="magic-chip"><i class="fa-solid fa-mountain-sun"></i> Manali</span>
+        <span class="magic-chip"><i class="fa-solid fa-umbrella-beach"></i> Bali</span>
+        <span class="magic-chip"><i class="fa-solid fa-city"></i> Dubai</span>
+        <span class="magic-chip"><i class="fa-solid fa-tree"></i> Coorg</span>
+        <span class="magic-chip"><i class="fa-solid fa-sailboat"></i> Andaman</span>
+        <span class="magic-chip"><i class="fa-solid fa-igloo"></i> Ladakh</span>
+        <span class="magic-chip"><i class="fa-solid fa-hippo"></i> Kenya</span>
+    </div>
 </div>
-     <% } %>
+
+<!-- ============ BENTO STATS ============ -->
+<div class="magic-bento magic-blur-fade mt-4">
+    <div class="magic-bento-card magic-spotlight">
+        <span class="magic-bento-icon"><i class="fa-solid fa-house-flag"></i></span>
+        <p class="magic-bento-value">10k+</p>
+        <p class="magic-bento-label">Stays listed worldwide</p>
+    </div>
+    <div class="magic-bento-card magic-spotlight">
+        <span class="magic-bento-icon"><i class="fa-solid fa-earth-americas"></i></span>
+        <p class="magic-bento-value">120+</p>
+        <p class="magic-bento-label">Cities &amp; destinations</p>
+    </div>
+    <div class="magic-bento-card magic-spotlight">
+        <span class="magic-bento-icon"><i class="fa-solid fa-star"></i></span>
+        <p class="magic-bento-value">4.9 ★</p>
+        <p class="magic-bento-label">Average guest rating</p>
+    </div>
+</div>
+
+<!-- ============ ALL LISTINGS ============ -->
+<h3 class="mt-5 mb-4 magic-blur-fade" style="font-weight: 800;">
+    Explore <span class="magic-gradient-text">All Listings</span>
+</h3>
+
+<div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 g-4">
+    <% for(let listing of Listings) { %>
+        <div class="col magic-blur-fade">
+            <a href="/listings/<%=listing._id%>" class="magic-listing-card magic-beam magic-beam-hover magic-spotlight">
+                <div class="magic-listing-thumb">
+                    <img src="<%= listing.image %>" alt="<%= listing.title %>" />
+                </div>
+                <div class="magic-listing-body">
+                    <p class="magic-listing-title"><%= listing.title %></p>
+                    <p class="magic-listing-price">
+                        <b>&#8377; <%= listing.price.toLocaleString("en-in") %></b> / night
+                    </p>
+                </div>
+            </a>
+        </div>
+    <% } %>
 </div>

@@ -11,10 +11,11 @@ const listingSchema = new mongoose.Schema({
 
   description: String,
 
-  image: {
-    filename: String,
-    url: String,
-  },
+ image: {
+  type: String,
+  default: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=60",
+  set: (v) => (v === "" ? "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=60" : v),
+},
 
   price: Number,
 

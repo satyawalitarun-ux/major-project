@@ -3,12 +3,16 @@
 <div class="container">
   <div class="edit-listing-container">
 
-```
-<h3 class="edit-listing-title text-center">
-  ✏️ Edit Your Listing
-</h3>
+<div class="edit-listing-container">
 
-<div class="edit-form-card">
+  <div class="text-center mb-4 magic-blur-fade">
+    <span class="magic-badge"><span class="dot"></span> Editing</span>
+    <h3 class="edit-listing-title magic-gradient-text" style="margin-top: 0.9rem;">
+      Edit Your Listing
+    </h3>
+  </div>
+
+<div class="edit-form-card magic-form-card magic-blur-fade">
 
   <form
     method="POST"
@@ -26,7 +30,7 @@
         name="listing[title]"
         value="<%= listing.title %>"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
       <div class="invalid-feedback">
@@ -43,7 +47,7 @@
       <textarea
         id="description"
         name="listing[description]"
-        class="form-control"
+        class="form-control magic-input"
         required
       ><%= listing.description %></textarea>
       <div class="invalid-feedback">
@@ -62,7 +66,7 @@
         name="listing[image]"
         value="<%= listing.image %>"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
       />
     </div>
 
@@ -77,7 +81,7 @@
         name="listing[price]"
         value="<%= listing.price %>"
         type="number"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
       <div class="invalid-feedback">
@@ -96,7 +100,7 @@
         name="listing[country]"
         value="<%= listing.country %>"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
       <div class="invalid-feedback">
@@ -115,7 +119,7 @@
         name="listing[location]"
         value="<%= listing.location %>"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
       <div class="invalid-feedback">
@@ -126,13 +130,13 @@
     <!-- Buttons -->
     <div class="edit-actions">
 
-      <button type="submit" class="save-listing-btn">
-        💾 Save Changes
+      <button type="submit" class="magic-shimmer-btn save-listing-btn">
+        <i class="fa-solid fa-floppy-disk"></i> Save Changes
       </button>
 
       <a
         href="/listings/<%= listing._id %>"
-        class="cancel-btn"
+        class="cancel-btn magic-ghost-btn"
       >
         Cancel
       </a>
@@ -142,7 +146,5 @@
   </form>
 
 </div>
-```
-
   </div>
 </div>

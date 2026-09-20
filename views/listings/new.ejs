@@ -3,12 +3,14 @@
 <div class="container">
   <div class="new-listing-container">
 
-```
-<h3 class="new-listing-title text-center">
-  Create a New Listing
-</h3>
+  <div class="text-center mb-4 magic-blur-fade">
+    <span class="magic-badge"><span class="dot"></span> Host with us</span>
+    <h3 class="new-listing-title magic-gradient-text" style="margin-top: 0.9rem;">
+      Create a New Listing
+    </h3>
+  </div>
 
-<div class="listing-form-card">
+<div class="magic-form-card magic-blur-fade">
 
   <form method="POST" action="/listings" novalidate class="needs-validation">
 
@@ -20,7 +22,7 @@
         name="listing[title]"
         placeholder="Enter listing title"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
     </div>
@@ -32,7 +34,7 @@
         id="description"
         name="listing[description]"
         placeholder="Tell us about your listing..."
-        class="form-control"
+        class="form-control magic-input"
         required
       ></textarea>
     </div>
@@ -45,7 +47,7 @@
         name="listing[image]"
         placeholder="Paste image URL"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
       />
     </div>
 
@@ -57,7 +59,7 @@
         name="listing[price]"
         placeholder="Enter price"
         type="number"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
     </div>
@@ -70,7 +72,7 @@
         name="listing[country]"
         placeholder="Enter country"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
     </div>
@@ -83,20 +85,18 @@
         name="listing[location]"
         placeholder="Enter location"
         type="text"
-        class="form-control"
+        class="form-control magic-input"
         required
       />
     </div>
 
     <!-- Button -->
-    <button type="submit" class="add-listing-btn">
-      ✨ Add Listing
+    <button type="submit" class="magic-shimmer-btn w-100 mt-2">
+      <i class="fa-solid fa-wand-magic-sparkles"></i> Add Listing
     </button>
 
   </form>
 
 </div>
-```
-
   </div>
 </div>
